@@ -24,4 +24,5 @@ export interface CandidatePoll {
   trumpPercentage: number;
   date: string;
   grade: string;
+  pollName: string;
 }

@@ -6,7 +6,7 @@
   }
   #content {
     width: 500px;
-    margin: 50px 100px;
+    margin: 30px 100px;
   }
   #start {
     font-size: 20px;
@@ -19,7 +19,10 @@
     font-weight: 400;
   }
   #winners {
-    margin-bottom: 50px;
+    margin-bottom: 15px;
+  }
+  #config {
+    margin-bottom: 40px;
   }
   .header {
     font-weight: 400;
@@ -31,6 +34,27 @@
   .problems {
     font-size: 20px;
   }
+  #bydate, #byrating {
+    text-decoration: underline;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .selected {
+    font-weight: bold;
+    text-decoration: none !important;
+    cursor: auto !important;
+  }
+  .tc {
+    display: table-cell;
+    padding: 0 4px;
+  }
+  .tr {
+    display: table-row;
+  }
+  .selected-polls {
+    margin-left: 100px;
+    font-size: 12px;
+  }
 </style>
 <div id="content">
   <div id="start">
@@ -39,26 +63,36 @@
   </div>
   <div id="winner"></div>
   <div id="winners"></div>
+  <div id="config">
+    <div id="bydate" class="selected">by most recent poll</div>
+    <div id="byrating">by best rated poll</div>
+  </div>
 
   <div id="how">
-    <div class="header">How is the score computed?</div>
-    <div class="how">
+    <div class="header">how is the score computed?</div>
+    <div>
       <p>
-      For each candidate look at how they're doing in the best rated general election poll against Trump from
+      For each candidate look at how they're doing in rated general election polls against Trump from
       <a href="https://projects.fivethirtyeight.com/polls/president-general">FiveThirtyEight</a>
-      for each swing state.
+      for each swing state. If there is no poll for a candidate for the state, assume an even split (50/50).
+      We chose a single poll for each state for each candidate, either the most recent one or the poll with
+      the highest rating on 538.
       </p>
       <p>
       Use their favored poll percentage multiplied by the number of delegates
       for each swing state. Sum them and choose a winner.
       </p>
     </div>
-    <div class="header">Known problems</div>
-    <div class="how">
+    <div class="header">swing states & delegates</div>
+    <div>
+      <p id="swingstates"></p>
+    </div>
+    </div>
+    <div class="header">problems</div>
+    <div>
       <p>
-        Date of the poll is not considered, just the ranking. In practice,
-        most of the polls aren't moving significantly and aren't super old. If
-        I get enough backlash I'll write some date parsing code (yuck).
+        We only choose a single poll. Maybe there's some solution that looks at
+        all of them and weights them, but now we're deep in heuristics land.
       </p>
       <a href="https://github.com/nsthorat/democratic-primary">Code</a>
        <p>
@@ -68,5 +102,10 @@
   </div>
 
 </div>
+<div class="selected-polls">
+  <div class="header">selected polls</div>
+  <p id="polls"></p>
+</div>
+
 
 <script src="index.ts"></script>

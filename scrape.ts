@@ -79,8 +79,12 @@ async function main() {
       // This is Trump
       // console.log(candidatesQuery[1].innerHTML);
 
-      const candidatePoll:
-          CandidatePoll = {candidatePercentage, trumpPercentage, grade, date};
+      const pollsterQuery =
+          poll.querySelector('.pollster-container').querySelectorAll('a');
+      const pollName = pollsterQuery[pollsterQuery.length - 1].innerHTML;
+
+      const candidatePoll: CandidatePoll =
+          {candidatePercentage, trumpPercentage, grade, date, pollName};
       if (candidatePolls[candidateName] == null) {
         candidatePolls[candidateName] = [];
       }
