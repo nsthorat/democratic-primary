@@ -1,0 +1,30 @@
+{
+    "name": "democratic-primary",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "license": "Apache-2.0",
+    "private": true,
+    "engines": {
+      "node": ">=8.9.0"
+    },
+    "scripts": {
+      "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr --open",
+      "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url ./",
+      "scrape": "ts-node scrape.ts"
+
+    },
+    "devDependencies": {
+      "@babel/core": "^7.0.0-0",
+      "@babel/plugin-transform-runtime": "^7.1.0",
+      "@types/node": "latest",
+      "cross-env": "7.0.0",
+      "babel-preset-env": "~1.6.1",
+      "clang-format": "~1.2.2",
+      "node-fetch": "2.6.0",
+      "node-html-parser": "~1.2.6",
+      "parcel-bundler": "~1.10.3",
+      "ts-node": "~8.6.2",
+      "typescript": "3.8.2"
+    }
+  }

@@ -1,0 +1,72 @@
+
+<style>
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+  }
+  #content {
+    width: 500px;
+    margin: 50px 100px;
+  }
+  #start {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  #winner {
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: 400;
+  }
+  #winners {
+    margin-bottom: 50px;
+  }
+  .header {
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .runnerup {
+    margin: 6px 0px;
+  }
+  .problems {
+    font-size: 20px;
+  }
+</style>
+<div id="content">
+  <div id="start">
+    Who to vote for in the primary, ranked by who is likely to beat
+    Trump in swing states.
+  </div>
+  <div id="winner"></div>
+  <div id="winners"></div>
+
+  <div id="how">
+    <div class="header">How is the score computed?</div>
+    <div class="how">
+      <p>
+      For each candidate look at how they're doing in the best rated general election poll against Trump from
+      <a href="https://projects.fivethirtyeight.com/polls/president-general">FiveThirtyEight</a>
+      for each swing state.
+      </p>
+      <p>
+      Use their favored poll percentage multiplied by the number of delegates
+      for each swing state. Sum them and choose a winner.
+      </p>
+    </div>
+    <div class="header">Known problems</div>
+    <div class="how">
+      <p>
+        Date of the poll is not considered, just the ranking. In practice,
+        most of the polls aren't moving significantly and aren't super old. If
+        I get enough backlash I'll write some date parsing code (yuck).
+      </p>
+      <a href="https://github.com/nsthorat/democratic-primary">Code</a>
+       <p>
+      Made by <a href="https://twitter.com/nsthorat">Nikhil Thorat</a>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<script src="index.ts"></script>
