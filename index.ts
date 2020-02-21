@@ -83,21 +83,29 @@ async function main() {
           .join(', ');
 
   const pollText = [];
+  pollText.push(
+      `<div class='tr'>` +
+      `<div class='tc'><b>candidate</b></div>` +
+      `<div class='tc'><b>state</b></div>` +
+      `<div class='tc'><b>poll name</b></div>` +
+      `<div class='tc'><b>candidate</b></div>` +
+      `<div class='tc'><b>trump</b></div>` +
+      `<div class='tc'><b>grade</b></div>` +
+      `<div class='tc'><b>date</b></div>` +
+      `</div>`);
   bestPolls.forEach(poll => {
     pollText.push(
         `<div class='tr'>` +
         `<div class='tc'>${poll.name}</div>` +
         `<div class='tc'>${poll.state}</div>` +
         `<div class='tc'>${poll.poll.pollName}</div>` +
-        `<div class='tc'>${poll.poll.candidatePercentage}</div>` +
-        `<div class='tc'>${poll.poll.trumpPercentage}</div>` +
+        `<div class='tc'>${poll.poll.candidatePercentage}%</div>` +
+        `<div class='tc'>${poll.poll.trumpPercentage}%</div>` +
         `<div class='tc'>${poll.poll.grade}</div>` +
         `<div class='tc'>${poll.poll.date}</div>` +
         `</div>`);
   });
   document.getElementById('polls').innerHTML = pollText.join('');
-
-  console.log(bestPolls);
 }
 
 function getSwingState(state: string): SwingState {
@@ -189,9 +197,4 @@ function parseDate(date: string): {month: number, day: number, year: number} {
 
   return {month, day, year};
 }
-
-
-console.log(['Oct 13-26, 2019', 'Oct 13-26, 2020', 'N/A -- fake'].sort(
-    (a, b) => compareDates(a, b)));
-parseDate('Oct 13-26, 2019');
 main();

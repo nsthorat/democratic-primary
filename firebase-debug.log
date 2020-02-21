@@ -1,0 +1,16 @@
+[debug] [2020-02-21T18:34:02.820Z] ----------------------------------------------------------------------
+[debug] [2020-02-21T18:34:02.822Z] Command:       /Users/nsthorat/emsdk/node/12.9.1_64bit/bin/node /Users/nsthorat/emsdk/node/12.9.1_64bit/bin/firebase login
+[debug] [2020-02-21T18:34:02.823Z] CLI Version:   7.13.1
+[debug] [2020-02-21T18:34:02.823Z] Platform:      darwin
+[debug] [2020-02-21T18:34:02.823Z] Node Version:  v12.9.1
+[debug] [2020-02-21T18:34:02.823Z] Time:          Fri Feb 21 2020 10:34:02 GMT-0800 (Pacific Standard Time)
+[debug] [2020-02-21T18:34:02.823Z] ----------------------------------------------------------------------
+[debug] [2020-02-21T18:34:02.823Z] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again.
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=178220244&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
