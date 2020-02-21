@@ -1,16 +1,36 @@
-[debug] [2020-02-21T18:34:02.820Z] ----------------------------------------------------------------------
-[debug] [2020-02-21T18:34:02.822Z] Command:       /Users/nsthorat/emsdk/node/12.9.1_64bit/bin/node /Users/nsthorat/emsdk/node/12.9.1_64bit/bin/firebase login
-[debug] [2020-02-21T18:34:02.823Z] CLI Version:   7.13.1
-[debug] [2020-02-21T18:34:02.823Z] Platform:      darwin
-[debug] [2020-02-21T18:34:02.823Z] Node Version:  v12.9.1
-[debug] [2020-02-21T18:34:02.823Z] Time:          Fri Feb 21 2020 10:34:02 GMT-0800 (Pacific Standard Time)
-[debug] [2020-02-21T18:34:02.823Z] ----------------------------------------------------------------------
-[debug] [2020-02-21T18:34:02.823Z] 
-[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+[debug] [2020-02-21T18:40:30.719Z] ----------------------------------------------------------------------
+[debug] [2020-02-21T18:40:30.720Z] Command:       /Users/nsthorat/emsdk/node/12.9.1_64bit/bin/node /Users/nsthorat/emsdk/node/12.9.1_64bit/bin/firebase deploy
+[debug] [2020-02-21T18:40:30.720Z] CLI Version:   7.13.1
+[debug] [2020-02-21T18:40:30.720Z] Platform:      darwin
+[debug] [2020-02-21T18:40:30.720Z] Node Version:  v12.9.1
+[debug] [2020-02-21T18:40:30.720Z] Time:          Fri Feb 21 2020 10:40:30 GMT-0800 (Pacific Standard Time)
+[debug] [2020-02-21T18:40:30.720Z] ----------------------------------------------------------------------
+[debug] [2020-02-21T18:40:30.720Z] 
+[debug] [2020-02-21T18:40:30.726Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-21T18:40:30.726Z] > authorizing via signed-in user
+[debug] [2020-02-21T18:40:30.726Z] [iam] checking project democratic-primary-e64b0 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-02-21T18:40:30.727Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/democratic-primary-e64b0:testIamPermissions  
 
-[info] i  To change your data collection preference at any time, run `firebase logout` and log in again.
+[debug] [2020-02-21T18:40:34.555Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-21T18:40:34.557Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/democratic-primary-e64b0  
+ 
+[debug] [2020-02-21T18:40:36.158Z] <<< HTTP RESPONSE 200
 [info] 
-[info] Visit this URL on this device to log in:
-[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=178220244&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] === Deploying to 'democratic-primary-e64b0'...
 [info] 
-[info] Waiting for authentication...
+[info] i  deploying hosting
+[debug] [2020-02-21T18:40:36.163Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/democratic-primary-e64b0/versions  
+
+[debug] [2020-02-21T18:40:38.383Z] <<< HTTP RESPONSE 200
+[info] i  hosting[democratic-primary-e64b0]: beginning deploy...
+[info] i  hosting[democratic-primary-e64b0]: found 5 files in dist
+[debug] [2020-02-21T18:40:38.401Z] [hosting] hash cache [ZGlzdA] stored for 5 files
+[debug] [2020-02-21T18:40:38.401Z] [hosting][hash queue][FINAL]
+[debug] [2020-02-21T18:40:38.401Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/democratic-primary-e64b0/versions/1efa61ac55e24a03:populateFiles  
+ <request body omitted>
+[debug] [2020-02-21T18:41:42.611Z] [populateQueue] Retrying task index 0
+[debug] [2020-02-21T18:41:42.612Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/democratic-primary-e64b0/versions/1efa61ac55e24a03:populateFiles  
+ <request body omitted>
+[debug] [2020-02-21T18:41:56.855Z] [populateQueue] Retrying task index 0
+[debug] [2020-02-21T18:41:56.855Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/democratic-primary-e64b0/versions/1efa61ac55e24a03:populateFiles  
+ <request body omitted>
